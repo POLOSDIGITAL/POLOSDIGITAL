@@ -64,7 +64,7 @@ loginForm.addEventListener("submit", async (event) => {
     loginMessage.textContent = "Login successful!";
 
     // Redirect to main website
-    window.location.href = "index.html";
+    window.location.href = "home.html";
 
   } catch (error) {
 
