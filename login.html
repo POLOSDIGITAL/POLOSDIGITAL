@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | POLOS DIGITAL</title>
+
+  <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND GLOW -->
+  <div class="login-glow"></div>
+
+  <!-- LOGIN CONTAINER -->
+  <main class="login-container">
+
+    <div class="login-card">
+
+      <!-- LOGO -->
+      <div class="login-logo">
+
+        <img src="logo_4k.png" alt="POLOS DIGITAL">
+
+        <div>
+          <h2>POLOS</h2>
+          <p>DIGITAL</p>
+        </div>
+
+      </div>
+
+      <!-- TITLE -->
+      <div class="login-heading">
+
+        <h1>Welcome Back</h1>
+
+        <p>
+          Sign in to continue to
+          <span>Polos Digital</span>
+        </p>
+
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm">
+
+        <!-- EMAIL -->
+        <div class="input-group">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          >
+
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+
+          <label for="password">
+            Password
+          </label>
+
+          <div class="password-box">
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            >
+
+            <button
+              type="button"
+              id="togglePassword"
+            >
+              Show
+            </button>
+            <!-- FORGOT PASSWORD -->
+        <div class="forgot-password">
+      <a href="#" id="forgotPassword">
+    Forgot Password?
+  </a>
+</div>
+
+          </div>
+        </div>
+
+        <!-- ERROR / SUCCESS MESSAGE -->
+        <p id="loginMessage"></p>
+
+        <!-- LOGIN BUTTON -->
+        <button
+          type="submit"
+          class="login-btn"
+        >
+          Sign In
+        </button>
+
+      </form>
+
+      <!-- SIGN UP LINK -->
+      <div class="signup-link">
+
+        <p>
+          Don't have an account?
+          <a href="signup.html">
+            Create Account
+          </a>
+        </p>
+
+      </div>
+
+      <!-- BRAND -->
+      <div class="back-link">
+        POLOS DIGITAL
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- LOGIN JAVASCRIPT ONLY -->
+  <script type="module" src="login.js"></script>
+
+</body>
+
+</html>
+
