@@ -1,4 +1,7 @@
-
+/* =========================================
+   POLOS DIGITAL
+   PREMIUM SIGNUP UI
+========================================= */
 
 * {
   margin: 0;
@@ -11,8 +14,6 @@
   --orange: #ff5a1f;
   --orange-light: #ff7a45;
   --black: #050505;
-  --dark: #090b10;
-  --text: #ffffff;
   --muted: #9ca3af;
   --border: rgba(255, 255, 255, 0.1);
 }
@@ -23,6 +24,7 @@ html {
 
 body {
   min-height: 100vh;
+
   background:
     radial-gradient(
       circle at 80% 15%,
@@ -34,27 +36,29 @@ body {
       rgba(255, 90, 31, 0.08),
       transparent 28%
     ),
-    var(--black);
+    #050505;
 
-  color: var(--text);
+  color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  overflow-x: hidden;
   position: relative;
+
+  overflow-x: hidden;
 }
 
 
 /* =========================================
-   BACKGROUND GRID
+   GRID
 ========================================= */
 
 body::before {
   content: "";
 
   position: fixed;
+
   inset: 0;
 
   background-image:
@@ -84,7 +88,7 @@ body::before {
    ORANGE GLOW
 ========================================= */
 
-.login-glow {
+.signup-glow {
   position: fixed;
 
   width: 650px;
@@ -106,9 +110,6 @@ body::before {
 
   pointer-events: none;
 }
-
-
-/* SECOND GLOW */
 
 body::after {
   content: "";
@@ -137,28 +138,33 @@ body::after {
    CONTAINER
 ========================================= */
 
-.login-container {
+.signup-container {
   width: 100%;
+
   min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
-  padding: 30px;
+  padding: 40px 20px;
 
   position: relative;
+
   z-index: 2;
 }
 
 
 /* =========================================
-   LOGIN CARD
+   CARD
 ========================================= */
 
-.login-card {
+.signup-card {
   width: 100%;
-  max-width: 460px;
+
+  max-width: 480px;
 
   padding: 45px;
 
@@ -174,6 +180,7 @@ body::after {
   border: 1px solid var(--border);
 
   backdrop-filter: blur(24px);
+
   -webkit-backdrop-filter: blur(24px);
 
   box-shadow:
@@ -190,7 +197,7 @@ body::after {
 
 /* CARD TOP LINE */
 
-.login-card::before {
+.signup-card::before {
   content: "";
 
   position: absolute;
@@ -208,7 +215,8 @@ body::after {
     transparent
   );
 
-  box-shadow: 0 0 20px var(--orange);
+  box-shadow:
+    0 0 20px var(--orange);
 }
 
 
@@ -216,18 +224,19 @@ body::after {
    LOGO
 ========================================= */
 
-.login-logo {
+.signup-logo {
   display: flex;
 
   justify-content: center;
+
   align-items: center;
 
   gap: 14px;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
-.login-logo img {
+.signup-logo img {
   width: 58px;
   height: 58px;
 
@@ -243,13 +252,13 @@ body::after {
   animation: logoPulse 3s ease-in-out infinite;
 }
 
-.login-logo h2 {
+.signup-logo h2 {
   font-size: 24px;
+
   font-weight: 800;
-  letter-spacing: -0.5px;
 }
 
-.login-logo p {
+.signup-logo p {
   font-size: 10px;
 
   letter-spacing: 4px;
@@ -264,31 +273,29 @@ body::after {
    HEADING
 ========================================= */
 
-.login-heading {
+.signup-heading {
   text-align: center;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
-.login-heading h1 {
+.signup-heading h1 {
   font-size: 40px;
 
   line-height: 1.1;
 
   letter-spacing: -1.5px;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.login-heading p {
+.signup-heading p {
   color: var(--muted);
 
   font-size: 15px;
-
-  line-height: 1.6;
 }
 
-.login-heading span {
+.signup-heading span {
   color: var(--orange);
 
   font-weight: 700;
@@ -300,17 +307,17 @@ body::after {
 ========================================= */
 
 .input-group {
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 
 .input-group label {
   display: block;
 
-  margin-bottom: 9px;
-
-  font-size: 13px;
+  margin-bottom: 8px;
 
   color: #d1d5db;
+
+  font-size: 13px;
 
   font-weight: 600;
 }
@@ -323,7 +330,7 @@ body::after {
 .input-group input {
   width: 100%;
 
-  padding: 15px 16px;
+  padding: 14px 16px;
 
   border-radius: 13px;
 
@@ -380,7 +387,8 @@ body::after {
 .password-box button {
   position: absolute;
 
-  right: 13px;
+  right: 12px;
+
   top: 50%;
 
   transform: translateY(-50%);
@@ -409,35 +417,10 @@ body::after {
 
 
 /* =========================================
-   FORGOT PASSWORD
-========================================= */
-
-.forgot-password {
-  text-align: right;
-
-  margin-top: 9px;
-}
-
-.forgot-password a {
-  color: #9ca3af;
-
-  text-decoration: none;
-
-  font-size: 12px;
-
-  transition: 0.3s;
-}
-
-.forgot-password a:hover {
-  color: var(--orange);
-}
-
-
-/* =========================================
    MESSAGE
 ========================================= */
 
-#loginMessage {
+#signupMessage {
   min-height: 20px;
 
   text-align: center;
@@ -451,10 +434,10 @@ body::after {
 
 
 /* =========================================
-   LOGIN BUTTON
+   SIGNUP BUTTON
 ========================================= */
 
-.login-btn {
+.signup-btn {
   width: 100%;
 
   padding: 16px;
@@ -483,7 +466,7 @@ body::after {
     background 0.3s ease;
 }
 
-.login-btn::before {
+.signup-btn::before {
   content: "";
 
   position: absolute;
@@ -504,11 +487,11 @@ body::after {
   transition: 0.5s;
 }
 
-.login-btn:hover::before {
+.signup-btn:hover::before {
   left: 100%;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
   transform: translateY(-3px);
 
   background: var(--orange-light);
@@ -517,28 +500,28 @@ body::after {
     0 15px 35px rgba(255, 90, 31, 0.25);
 }
 
-.login-btn:active {
+.signup-btn:active {
   transform: scale(0.98);
 }
 
 
 /* =========================================
-   SIGNUP LINK
+   LOGIN LINK
 ========================================= */
 
-.signup-link {
+.login-link {
   text-align: center;
 
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
-.signup-link p {
+.login-link p {
   color: #8f96a3;
 
   font-size: 13px;
 }
 
-.signup-link a {
+.login-link a {
   color: var(--orange);
 
   text-decoration: none;
@@ -548,7 +531,7 @@ body::after {
   transition: 0.3s;
 }
 
-.signup-link a:hover {
+.login-link a:hover {
   color: var(--orange-light);
 
   text-shadow:
@@ -561,8 +544,6 @@ body::after {
 ========================================= */
 
 .back-link {
-  display: block;
-
   text-align: center;
 
   margin-top: 24px;
@@ -643,21 +624,21 @@ body::after {
 
 @media (max-width: 600px) {
 
-  .login-container {
-    padding: 20px;
+  .signup-container {
+    padding: 25px 15px;
   }
 
-  .login-card {
-    padding: 32px 22px;
+  .signup-card {
+    padding: 30px 22px;
 
     border-radius: 24px;
   }
 
-  .login-heading h1 {
+  .signup-heading h1 {
     font-size: 32px;
   }
 
-  .login-logo img {
+  .signup-logo img {
     width: 52px;
     height: 52px;
   }
